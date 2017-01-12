@@ -13,6 +13,7 @@
 Run npm install:
 ```shell
 npm install
+npm run vscode:prepublish
 ```
 
 Test:
