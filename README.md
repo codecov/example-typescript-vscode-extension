@@ -7,8 +7,8 @@
 [3]: mailto:hello@codecov.io
 [4]: https://github.com/codecov/codecov-bash
 
-[![codecov](https://codecov.io/gh/nixel2007/example-typescript-vscode-extension/branch/master/graph/badge.svg)](https://codecov.io/gh/nixel2007/example-typescript-vscode-extension)
-[![Build Status](https://travis-ci.org/nixel2007/example-typescript-vscode-extension.svg?branch=master)](https://travis-ci.org/nixel2007/example-typescript-vscode-extension)
+[![codecov](https://codecov.io/gh/codecov/example-typescript-vscode-extension/branch/master/graph/badge.svg)](https://codecov.io/gh/codecov/example-typescript-vscode-extension)
+[![Build Status](https://travis-ci.org/codecov/example-typescript-vscode-extension.svg?branch=master)](https://travis-ci.org/codecov/example-typescript-vscode-extension)
 
 Run npm install:
 ```shell
