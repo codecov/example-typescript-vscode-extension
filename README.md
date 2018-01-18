@@ -9,11 +9,15 @@ Add to your `.travis.yml` file.
 ```yml
 language: node
 
+script:
+  - npm run vscode:prepublish
+  - npm test
+
 after_success:
 - bash <(curl -s https://codecov.io/bash)
 ```
 ### Producing Coverage Reports
-Make sure you build your extension. In this case via `tsc -p ./`
+Make sure you build your extension. In this case via `tsc -p ./` or simply `npm run vscode:prepublish`
 
 Add to `coverconfig.json`:
 ```json
@@ -27,7 +31,7 @@ Add to `coverconfig.json`:
     "verbose": false
 }
 ```
-Run `node ./node_modules/vscode/bin/test` (make sure `vscode` is installed via `npm`)
+Run `npm test` which runs `node ./node_modules/vscode/bin/test`
 
 ## Differences to standard `yo code` generated example
 
