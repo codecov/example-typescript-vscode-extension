@@ -35,6 +35,16 @@ Run `node ./node_modules/vscode/bin/test` (make sure `vscode` is installed via `
 * Changes in `stripts` and `devDependencies` section in `package.json`
 * `coverconfig.json` added - small config file to change coverage settings localy.
 
+## Caveats
+### Private Repos
+
+Add to your `.travis.yml` file.
+
+```yml
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t uuid-repo-token
+```
+
 ## Support
 
 ### Contact
