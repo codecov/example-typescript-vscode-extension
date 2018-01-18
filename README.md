@@ -3,11 +3,22 @@
 [![codecov](https://codecov.io/gh/codecov/example-typescript-vscode-extension/branch/master/graph/badge.svg)](https://codecov.io/gh/codecov/example-typescript-vscode-extension)
 [![Build Status](https://travis-ci.org/codecov/example-typescript-vscode-extension.svg?branch=master)](https://travis-ci.org/codecov/example-typescript-vscode-extension)
 
+## tl;dr
+1. Clone this repo `git clone git@github.com:codecov/example-typescript-vscode-extension.git`
+2. Start working on your TypeScript project (only ts-code)
+
 ## Guide
 ### Travis Setup
 Add to your `.travis.yml` file.
 ```yml
 language: node
+
+before_install:
+  - if [ $TRAVIS_OS_NAME == "linux" ]; then
+      export CXX="g++-4.9" CC="gcc-4.9" DISPLAY=:99.0;
+      sh -e /etc/init.d/xvfb start;
+      sleep 3;
+    fi
 
 script:
   - npm run vscode:prepublish
