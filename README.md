@@ -1,28 +1,49 @@
-# TypeScript VSCode Extension Example
-| [https://codecov.io][1] | [@codecov][2] | [hello@codecov.io][3] |
-| ----------------------- | ------------- | --------------------- |
-
-[1]: https://codecov.io/
-[2]: https://twitter.com/codecov
-[3]: mailto:hello@codecov.io
-[4]: https://github.com/codecov/codecov-bash
+# [Codecov][1] VSCode Extension Example
 
 [![codecov](https://codecov.io/gh/codecov/example-typescript-vscode-extension/branch/master/graph/badge.svg)](https://codecov.io/gh/codecov/example-typescript-vscode-extension)
 [![Build Status](https://travis-ci.org/codecov/example-typescript-vscode-extension.svg?branch=master)](https://travis-ci.org/codecov/example-typescript-vscode-extension)
 
-Run npm install:
-```shell
-npm install
-npm run vscode:prepublish
-```
+## Guide
+### Travis Setup
+Add to your `.travis.yml` file.
+```yml
+language: node
 
-Test:
-```shell
-npm test
+after_success:
+- bash <(curl -s https://codecov.io/bash)
 ```
+### Producing Coverage Reports
+Make sure you build your extension. In this case via `tsc -p ./`
+
+Add to `coverconfig.json`:
+```json
+{
+    "enabled": true,
+    "relativeSourcePath": "../src",
+    "relativeCoverageDir": "../../coverage",
+    "ignorePatterns": ["**/node_modules/**"],
+    "includePid": false,
+    "reports": ["json", "html", "lcov"],
+    "verbose": false
+}
+```
+Run `node ./node_modules/vscode/bin/test` (make sure `vscode` is installed via `npm`)
 
 ## Differences to standard `yo code` generated example
 
 * Modified `test/index.ts` - the main testrunner rewritten completely
 * Changes in `stripts` and `devDependencies` section in `package.json`
 * `coverconfig.json` added - small config file to change coverage settings localy.
+
+## Support
+
+### Contact
+- Intercom (in-app messanger)
+- Email: [support@codecov.io](mailto:support@codecov.io)
+- Slack: [slack.codecov.io](https://slack.codecov.io)
+- [gh/codecov/support](https://github.com/codecov/support)
+
+1. More documentation at https://docs.codecov.io
+2. Configure codecov through the `codecov.yml`  https://docs.codecov.io/docs/codecov-yaml
+
+[1]: https://codecov.io/
