@@ -45,7 +45,7 @@
     "istanbul": "^0.4.5",
     "mocha": "^5.0.1",
     "remap-istanbul": "^0.10.1",
-    "decache": "^4.4.0"
+    "decache": "^4.4.0",
     "typescript": "^2.7.2",
     "vscode": "^1.0.3"
   }
