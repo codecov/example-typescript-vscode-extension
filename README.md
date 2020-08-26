@@ -2,6 +2,7 @@
 
 [![codecov](https://codecov.io/gh/codecov/example-typescript-vscode-extension/branch/master/graph/badge.svg)](https://codecov.io/gh/codecov/example-typescript-vscode-extension)
 [![Build Status](https://travis-ci.org/codecov/example-typescript-vscode-extension.svg?branch=master)](https://travis-ci.org/codecov/example-typescript-vscode-extension)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcodecov%2Fexample-typescript-vscode-extension.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcodecov%2Fexample-typescript-vscode-extension?ref=badge_shield)
 
 ## tl;dr
 1. Clone this repo `git clone git@github.com:codecov/example-typescript-vscode-extension.git`
@@ -66,3 +67,7 @@ after_success:
 We are happy to help if you have any questions. Please contact email our Support at [support@codecov.io](mailto:support@codecov.io)
 
 [1]: https://codecov.io/
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcodecov%2Fexample-typescript-vscode-extension.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcodecov%2Fexample-typescript-vscode-extension?ref=badge_large)
